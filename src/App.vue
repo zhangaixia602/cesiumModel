@@ -1,26 +1,26 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+	<nav>
+		<router-link v-for="(route,index) in routes" :to="route.path" :key="index">{{route.id}}</router-link>
+	</nav>
+  <router-view/>
 </template>
-
 <script>
-import HelloWorld from './components/HelloWorld.vue'
-
 export default {
   name: 'App',
-  components: {
-    HelloWorld
+  data() {
+  	return {
+  		routes: [{
+  				path: '/',
+  				id: 'home',
+  				name: '首页'
+  			},
+  			{
+  				path: '/about',
+  				id: 'about',
+  				name: '关于我们'
+  			}
+  		]
+  	}
   }
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
