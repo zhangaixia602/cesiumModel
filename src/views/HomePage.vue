@@ -30,18 +30,18 @@
 			viewer._cesiumWidget._creditContainer.style.display = "none";
 			viewer.baseLayerPicker.viewModel.selectedImagery = viewer.baseLayerPicker.viewModel.imageryProviderViewModels[
 				6];
-			//       let redBox = viewer.entities.add({
-			//           name : 'Red box with black outline',
-			//           position:Cesium.Cartesian3.fromDegrees(-123.0744619, 44.0503706),
-			//           model : {
-			//               uri : '/static/cityhome.glb'
-			//           }
-			//       });
-			// viewer.trackedEntity = redBox;
-			let palaceTileset = new Cesium.Cesium3DTileset({
-				url: '/static/tileset.json'
-			})
-			viewer.scene.primitives.add(palaceTileset);
+			      let redBox = viewer.entities.add({
+			          name : 'Red box with black outline',
+			          position:Cesium.Cartesian3.fromDegrees(-123.0744619, 44.0503706),
+			          model : {
+			              uri : '/static/cityhome.glb'
+			          }
+			      });
+			viewer.trackedEntity = redBox;
+			// let palaceTileset = new Cesium.Cesium3DTileset({
+			// 	url: '/static/tileset.json'
+			// })
+			// viewer.scene.primitives.add(palaceTileset);
 		}
 	}
 </script>
