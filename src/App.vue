@@ -1,7 +1,9 @@
 <template>
-	<nav>
-		<router-link v-for="(route,index) in routes" :to="route.path" :key="index">{{route.id}}</router-link>
-	</nav>
+	<header>
+		<nav>
+			<router-link v-for="(route,index) in routes" :to="route.path" :key="index">{{route.name}}</router-link>
+		</nav>
+	</header>
   <router-view/>
 </template>
 <script>
@@ -24,3 +26,12 @@ export default {
   }
 }
 </script>
+<style scoped>
+	header{
+		width:100%;
+		height:3.5rem;
+		position: fixed;
+		top:0;
+		left:0;
+	}
+</style>
