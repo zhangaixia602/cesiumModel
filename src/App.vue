@@ -20,7 +20,12 @@ export default {
   				path: '/about',
   				id: 'about',
   				name: '关于我们'
-  			}
+  			},
+			{
+				path:'/model',
+				id:'model',
+				name:'模型示例'
+			}
   		]
   	}
   }
