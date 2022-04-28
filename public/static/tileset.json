@@ -4,45 +4,23 @@
 		"version": "1.0"
 	},
 	"extras": {
-		"scenetree": "http://localhost:8080/static/scenetree.json"
+		"scenetree": "http://localhost:8081/static/models/scenetree.json"
 	},
 	"geometricError": 611.49622628141,
 	"properties": null,
 	"refine": "REPLACE",
 	"root": {
 		"boundingVolume": {
-			"box": [0.0, 0.0, 0.0, 305.748113140705, 0, 0, 0, 305.748113140705, 0, 0, 0, 305.748113140705]
+			"box": [0.0, 0.0, 152.874056570353, 305.748113140705, 0, 0, 0, 305.748113140705, 0, 0, 0, 152.874056570353]
 		},
 		"children": [{
-			"boundingVolume": {
-				"box": [-152.874056570353, -152.874056570353, -152.874056570353, 152.874056570353, 0, 0, 0,
-					152.874056570353, 0, 0, 0, 152.874056570353
-				]
-			},
-			"content": {
-				"uri": "http://localhost:8080/static/16_-1_-1_-1.json"
-			},
-			"geometricError": 0.0,
-			"refine": "REPLACE"
-		}, {
 			"boundingVolume": {
 				"box": [-152.874056570353, -152.874056570353, 152.874056570353, 152.874056570353, 0, 0, 0,
 					152.874056570353, 0, 0, 0, 152.874056570353
 				]
 			},
 			"content": {
-				"uri": "http://localhost:8080/static/16_-1_-1_0.json"
-			},
-			"geometricError": 0.0,
-			"refine": "REPLACE"
-		}, {
-			"boundingVolume": {
-				"box": [-152.874056570353, 152.874056570353, -152.874056570353, 152.874056570353, 0, 0, 0,
-					152.874056570353, 0, 0, 0, 152.874056570353
-				]
-			},
-			"content": {
-				"uri": "http://localhost:8080/static/16_-1_0_-1.json"
+				"uri": "http://localhost:8081/static/models/16_-1_-1_0.json"
 			},
 			"geometricError": 0.0,
 			"refine": "REPLACE"
@@ -53,18 +31,7 @@
 				]
 			},
 			"content": {
-				"uri": "http://localhost:8080/static/16_-1_0_0.json"
-			},
-			"geometricError": 0.0,
-			"refine": "REPLACE"
-		}, {
-			"boundingVolume": {
-				"box": [152.874056570353, -152.874056570353, -152.874056570353, 152.874056570353, 0, 0, 0,
-					152.874056570353, 0, 0, 0, 152.874056570353
-				]
-			},
-			"content": {
-				"uri": "http://localhost:8080/static/16_0_-1_-1.json"
+				"uri": "http://localhost:8081/static/models/16_-1_0_0.json"
 			},
 			"geometricError": 0.0,
 			"refine": "REPLACE"
@@ -75,18 +42,7 @@
 				]
 			},
 			"content": {
-				"uri": "http://localhost:8080/static/16_0_-1_0.json"
-			},
-			"geometricError": 0.0,
-			"refine": "REPLACE"
-		}, {
-			"boundingVolume": {
-				"box": [152.874056570353, 152.874056570353, -152.874056570353, 152.874056570353, 0, 0, 0,
-					152.874056570353, 0, 0, 0, 152.874056570353
-				]
-			},
-			"content": {
-				"uri": "http://localhost:8080/static/16_0_0_-1.json"
+				"uri": "http://localhost:8081/static/models/16_0_-1_0.json"
 			},
 			"geometricError": 0.0,
 			"refine": "REPLACE"
@@ -97,15 +53,15 @@
 				]
 			},
 			"content": {
-				"uri": "http://localhost:8080/static/16_0_0_0.json"
+				"uri": "http://localhost:8081/static/models/16_0_0_0.json"
 			},
 			"geometricError": 0.0,
 			"refine": "REPLACE"
 		}],
 		"geometricError": 611.49622628141,
-		"transform": [-0.895774225204419, -0.444509322128819, 0.0, 0.0, 0.285172300428061, -0.574678603459476,
-			0.767086215359418, 0.0, -0.340976973603776, 0.687136060228573, 0.641544026708663, 0.0, -
-			2177799.78646523, 4388697.42265133, 4070073.5505714, 1.0
+		"transform": [-0.895779807993888, -0.444498071526113, 0.0, 0.0, 0.285164247699966, -0.574680502379616,
+			0.767087786383296, 0.0, -0.34096904173861, 0.687141750000885, 0.641542148250273, 0.0, -2177749.10869249,
+			4388733.72778811, 4070061.60073117, 1.0
 		]
 	}
 }

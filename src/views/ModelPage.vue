@@ -1,14 +1,10 @@
 <template>
 	<div id="modelContainer"></div>
 </template>
-import * as Cesium from 'cesium/cesium';
 <script>
 	export default {
 		name: "ModelPage",
 		mounted() {
-			console.log(Cesium)
-			console.log(Cesium.Ion)
-			Cesium.Ion.defaultAccessToken = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJqdGkiOiI4ZGRkMjNkZC0xMDNiLTQ0NWQtOTRmYS01NGNlNTY3YzYwNWMiLCJpZCI6OTA1NzIsImlhdCI6MTY1MDQ0NTUyNH0.7H3KjR9TMpY6w1Rp3Aig0tzc0TJU8Cwy2LMqM8-CbJQ';
 			let viewer = new Cesium.Viewer('modelContainer', {
 				geocoder: false,
 				homeButton: false,
@@ -20,8 +16,8 @@ import * as Cesium from 'cesium/cesium';
 				fullscreenButton: false,
 				creditsDisplay: false,
 				vrButton: false,
-				selectionIndicator: false,//关闭绿色框
-				 infoBox:false//关闭焦点弹出框
+				selectionIndicator: false, //关闭绿色框
+				infoBox: false //关闭焦点弹出框
 				// skyBox:new Cesium.SkyBox({
 				//     sources : {
 				//         positiveX : '/static/px.jpg',
@@ -33,26 +29,32 @@ import * as Cesium from 'cesium/cesium';
 				//     }
 				// })
 			});
-			//viewer._cesiumWidget._creditContainer.style.display = "none";
+			viewer._cesiumWidget._creditContainer.style.display = "none";
 			viewer.baseLayerPicker.viewModel.selectedImagery = viewer.baseLayerPicker.viewModel.imageryProviderViewModels[
 				6];
 			//限制缩放
 			viewer.scene.screenSpaceCameraController.maximumZoomDistance = 2500;
-			let palaceTileset = new Cesium.Cesium3DTileset({
-				url: 'http://localhost:3203/view/structure/29'
+			let tileset = new Cesium.Cesium3DTileset({
+				//url: 'http://localhost:3203/view/structure/29'
+				url:'http://localhost:8081/static/models/tileset.json'
 			})
-			palaceTileset.readyPromise
-			  .then(function (tileset) {
-			    viewer.scene.primitives.add(tileset);
-			    viewer.zoomTo(
-			      tileset,
-			      new Cesium.HeadingPitchRange(
-			        0.0,
-			        -0.5,
-			        tileset.boundingSphere.radius * 2.0
-			      )
-			    );
-			  })
+			viewer.scene.primitives.add(tileset);
+			console.log(viewer.scene)
+			const initialPosition = new Cesium.Cartesian3(
+			  -1111583.3721328347,
+			  -5855888.151574568,
+			  2262561.444696748
+			);
+			const initialOrientation = new Cesium.HeadingPitchRoll.fromDegrees(
+			  100.0,
+			  -15.0,
+			  0.0
+			);
+			viewer.scene.camera.setView({
+			  destination: initialPosition,
+			  orientation: initialOrientation,
+			  endTransform: Cesium.Matrix4.IDENTITY,
+			});
 		}
 	}
 </script>
